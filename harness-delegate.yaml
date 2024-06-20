@@ -1,0 +1,5 @@
+service:
+  name: service
+  identifier: service
+  orgIdentifier: default
+  projectIdentifier: nodejsk8snoteapp
