@@ -64,7 +64,7 @@ These are the general steps to deploy an application on Kubernetes. Depending on
 
 ## 👉 **Tutorial**
 
-[![Kubernetes deployment](https://res.cloudinary.com/practicaldev/image/fetch/s--ryaqUHB9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm7dy8qnl1kyg3q10v0b.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--ryaqUHB9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm7dy8qnl1kyg3q10v0b.png)
+[Kubernetes deployment](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718926301/k8s-nodejs-app/v8uoio1hukp5nqyqmg6m.png)
 
 We will use our sample application that is already in the GitHub repository. We will use a Minikube Kubernetes cluster to deploy our application. 
 
@@ -128,7 +128,7 @@ docker build -t $your docker hub user name/$image name .
 docker push $your docker hub user name/$image name .
 ```
 
-[![build and pushed docker image to dockerhub](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718913623/k8s-nodejs-app/dwe7km3hgltcej59gkee.png)]
+[build and pushed docker image to dockerhub](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718913623/k8s-nodejs-app/dwe7km3hgltcej59gkee.png)
 
 ### **Step 3: Create or get access to a Kubernetes cluster**
 
@@ -212,7 +212,7 @@ kubectl get pods
 
 You should see the pods and their status.
 
-[![running pods/services/deployments](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718913623/k8s-nodejs-app/kyznin1l5ovaeu5f4mnv.png)]
+[running pods/services/deployments](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718913623/k8s-nodejs-app/kyznin1l5ovaeu5f4mnv.png)
 
 ### **Step 5: Let’s confirm our note app is working**
 
@@ -222,7 +222,7 @@ To view the app externally you need to get the service name
 kubectl get service
 ```
 
-[![kubectl get service](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924956/k8s-nodejs-app/wta3luawnokaqakbgvw1.png)]
+[kubectl get service](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924956/k8s-nodejs-app/wta3luawnokaqakbgvw1.png)
 
 Then run the minikube command
 
@@ -230,11 +230,11 @@ Then run the minikube command
 minikube service service-name
 ```
 
-[![expose service outside minikube](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924957/k8s-nodejs-app/ka6bqb3vh8atx4sjlriu.png)]
+[expose service outside minikube](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924957/k8s-nodejs-app/ka6bqb3vh8atx4sjlriu.png)
 
 The app should open on your browser automatically
 
-[![App running](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924957/k8s-nodejs-app/d5tbnsaxax1enpnnw5c6.png)]
+[App running](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924957/k8s-nodejs-app/d5tbnsaxax1enpnnw5c6.png)
 
 
 ### **Step 6: Delete the deployment and service**
