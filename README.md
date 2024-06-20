@@ -235,3 +235,14 @@ minikube service service-name
 The app should open on your browser automatically
 
 [![App running](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718924957/k8s-nodejs-app/d5tbnsaxax1enpnnw5c6.png)]
+
+
+### **Step 6: Delete the deployment and service**
+
+```bash
+kubectl delete -f deployment.yaml
+```
+
+```bash
+kubectl delete -f service.yaml
+```
