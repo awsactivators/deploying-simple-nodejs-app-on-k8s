@@ -1,14 +1,8 @@
-# notes-app-ci/cd-example
-Simple Node.js application with unit tests to show how to automate tests using Harness CI!
-
-## Prerequisites
-> - Free [Harness cloud](https://www.harness.io/products/continuous-integration?utm_source=internal&utm_medium=social&utm_campaign=devadvocacy&utm_content=pavan_notes_article&utm_term=get-started) account to set up continuous integration 
-> - [Node.js](https://nodejs.org/en/download/) installed 
-
-
-# Deploying an Application on Kubernetes: A Complete Guide!
+# Deploying a nodejs Application on Kubernetes: A Complete Guide!
 
 ![guide](https://imgur.com/2TkZCg7.png)
+
+A Simple Node.js application
 
 **Kubernetes** is an open-source platform for automating the deployment, scaling, and management of containerized applications. It is a popular tool for container orchestration and provides a way to manage large numbers of containers as a single unit rather than having to manage each container individually.
 
@@ -25,7 +19,6 @@ Additionally, Kubernetes offers robust security features, ensuring that applicat
 
 To use Kubernetes, you need to set up a cluster, which is a set of machines that run the Kubernetes control plane and the containers. You can set up a cluster on your infrastructure or use a cloud provider such as Amazon Web Services (AWS), Google Cloud Platform (GCP), or Microsoft Azure.
 
-I used minikube, download and install [minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download) 
 
 * ### **Package your application into containers**:
     
@@ -59,11 +52,8 @@ After your application is deployed, you can use the kubectl tool to monitor the 
 
 These are the general steps to deploy an application on Kubernetes. Depending on the application's complexity, additional steps may be required, such as configuring storage, network policies, or security. However, this should give you a good starting point for deploying your application on Kubernetes.
 
-Today, we will see how to automate simple application deployment on Kubernetes using Harness.
 
 ## 👉 **Prerequisites**
-
-* Free [Harness Cloud](https://app.harness.io/auth/#/signup/?module=cd&utm_source=internal&utm_medium=social&utm_campaign=devadvocacy&utm_content=pavan_notes_cicd_article&utm_term=get-started) account
     
 * Download and install [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
     
@@ -76,7 +66,7 @@ Today, we will see how to automate simple application deployment on Kubernetes u
 
 [![Kubernetes deployment](https://res.cloudinary.com/practicaldev/image/fetch/s--ryaqUHB9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm7dy8qnl1kyg3q10v0b.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--ryaqUHB9--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qm7dy8qnl1kyg3q10v0b.png)
 
-We will use our sample application that is already in the GitHub repository. We will use a Kubernetes cluster to deploy our application. Next, we will use a CI/CD platform, Harness, in this tutorial to show how we can automate the software delivery process easily.
+We will use our sample application that is already in the GitHub repository. We will use a Minikube Kubernetes cluster to deploy our application. 
 
 ### **Step 1: Test the sample application locally**
 
@@ -142,9 +132,10 @@ docker push $your docker hub user name/$image name .
 
 ### **Step 3: Create or get access to a Kubernetes cluster**
 
-Make sure to have access to a Kubernetes cluster from any cloud provider. You can even use Minikube or Kind to create a cluster. In this tutorial, we are going to make use of a Kubernetes cluster from Google Cloud (GCP)
+Make sure to have access to a Kubernetes cluster from any cloud provider. You can even use Minikube or Kind to create a cluster. In this tutorial, we are going to make use of a minikube cluster 
 
-I already have an account on Google Cloud, so creating a cluster will be easy.
+download and install [minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download) 
+
 
 ### **Step 4: Make sure the Kubernetes manifest files are neat and clean**
 
@@ -223,7 +214,7 @@ You should see the pods and their status.
 
 [![running pods/services/deployments](https://res.cloudinary.com/dqtokk1cn/image/upload/v1718913623/k8s-nodejs-app/kyznin1l5ovaeu5f4mnv.png)]
 
-### **Step 5: Let’s confirm our note app**
+### **Step 5: Let’s confirm our note app is working**
 
 To view the app externally you need to get the service name
 
